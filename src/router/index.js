@@ -15,10 +15,10 @@ Vue.use(Router);
 const router = new Router({
 
   routes: [
-    {
+    /*{
       path: '*',
       redirect:'/login'
-    },
+    },*/
     {
       path:'/',
       redirect: '/login'
@@ -26,28 +26,19 @@ const router = new Router({
     {
       path: '/home',
       name: 'Home',
-      component: Home,
-      meta:{
-        requiresAuth:true
-      }
+      component: Home
     },
     {
       path: '/addCargo',
       name: 'addCargo',
-      component: addCargo,
-      meta:{
-        requiresAuth:true
-      }
+      component: addCargo
 
     },
     {
       path: '/edit',
       name: 'Edit',
       component: Edit,
-      props: true,
-      meta:{
-        requiresAuth:true
-      }
+      props: true
     },
     {
       path: '/login',
@@ -62,34 +53,22 @@ const router = new Router({
     {
       path: '/Cargoes',
       name: 'Cargoes',
-      component: Cargoes,
-      meta:{
-        requiresAuth:true
-      }
+      component: Cargoes
     },
     {
       path: '/providers',
       name: 'providers',
-      component: providers,
-      meta:{
-        requiresAuth:true
-      }
+      component: providers
     },
     {
       path: '/about',
       name: 'AboutUs',
-      component: AboutUs,
-      meta:{
-        requiresAuth:true
-      }
+      component: AboutUs
     },
     {
       path: '/contact',
       name: 'ContactUs',
-      component: ContactUs,
-      meta:{
-        requiresAuth:true
-      }
+      component: ContactUs
     }
   ]
 });

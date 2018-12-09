@@ -7,16 +7,16 @@
       <b-navbar-brand to="/">Cargo Delivery System</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
-          <b-nav-item to="/cargoes"><i class="fa fa-list" style="padding: 5px">All Cargoes</i></b-nav-item>
-          <b-nav-item to="/addCargo"><i class="fa fa-list" style="padding: 5px"> AddCargo</i></b-nav-item>
-          <b-nav-item to="/providers"><i class="fa fa-list" style="padding: 5px"> providers</i></b-nav-item>
+          <b-nav-item data-test-home to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
+          <b-nav-item data-test-button1 to="/cargoes"><i class="fa fa-list" style="padding: 5px">All Cargoes</i></b-nav-item>
+          <b-nav-item data-test-button2 to="/addCargo"><i class="fa fa-list" style="padding: 5px"> AddCargo</i></b-nav-item>
+          <b-nav-item data-test-button3 to="/providers"><i class="fa fa-list" style="padding: 5px"> providers</i></b-nav-item>
 
 
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
-          <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
+          <b-nav-item data-test-button4 to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
+          <b-nav-item data-test-button5 to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
           <i class="fa fa-pied-piper-alt fa-1x" style="padding: 5px; color: white;"></i>
         </b-navbar-nav>
       </b-collapse>

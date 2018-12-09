@@ -1,12 +1,12 @@
 <template><div class="note" :style ="note">
   <div class="hero">
-    <h1 class="vue-title" >Homepage of cargo delivery syetem</h1>
+    <h1 data-test-Head class="vue-title" >Homepage of cargo delivery syetem</h1>
     <table align="center" style="color: white">
       <tr>
         <td>
-          <p class="lead" style="color: white"><b><i >Welcome to the cargo delivery system</i></b>
-          <p style="color: white">This is a Cargo Delivery&Search System</p>
-          <button @click="logout">Logout</button>
+          <p data-test-title style="color: white"><b><i >Welcome to the cargo delivery system</i></b>
+          <p data-test-content style="color: white">This is a Cargo Delivery&Search System</p>
+          <button data-test-button6 @click="logout">Logout</button>
         </td>
         <td>
           <img src="../assets/homer.gif" alt="description here" />
@@ -15,7 +15,7 @@
     </table>
 
     <p></p>
-    <p class="lead" style="color: white">This is the homepage of the Cargo Delivery System Web app</p>
+    <p data-test-Head2 style="color: white">This is the homepage of the Cargo Delivery System Web app</p>
   </div></div>
 </template>
 <script>

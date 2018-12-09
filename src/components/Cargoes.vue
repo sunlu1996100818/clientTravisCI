@@ -1,9 +1,9 @@
 <template><div class = "note" :style = "note">
   <div class="hero" style="color: white">
     <h3 class="vue-title"><i class="fa fa-list" style="padding: 3px "></i>{{messagetitle}}</h3>
-    <div id="app1">
+    <div data-test-div1 id="app1">
       <v-client-table :columns="columns" :data="cargoesList" :options="options">
-        <a slot="remove" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deleteCargo(props.row._id)"></a>
+        <a data-test-buttonDelete slot="remove" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deleteCargo(props.row._id)"></a>
         <a slot="edit" slot-scope="props" class="fa fa-edit fa-2x" @click="editCargo(props.row._id)"></a>
       </v-client-table>
     </div>

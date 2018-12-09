@@ -3,38 +3,38 @@
     <h3 class="vue-title"><i class="fa fa-money" style="padding: 3px;"></i>{{messagetitle}}</h3>
     <form @submit.prevent="submit">
       <div class="form-group" :class="{ 'form-group--error': $v.name.$error }">
-        <label class="form__label" style="color: darkblue">name</label>
-        <input class="form__input" v-model.trim="$v.name.$model"/>
+        <label data-test-name class="form__label" style="color: darkblue">name</label>
+        <input data-test="name1" class="form__input" v-model.trim="$v.name.$model"/>
       </div>
       <div class="error" v-if="!$v.name.required"  >name is Required</div>
 
       <div class="form-group" :class="{ 'form-group--error': $v.price.$error }">
-        <label class="form__label" style="color: darkblue">price</label>
-        <input class="form__input" v-model.trim="$v.price.$model"/>
+        <label data-test-price class="form__label" style="color: darkblue">price</label>
+        <input data-test="price" class="form__input" v-model.trim="$v.price.$model"/>
       </div>
       <div class="error" v-if="!$v.price.required"  >price is Required</div>
 
       <div class="form-group" :class="{ 'form-group--error': $v.amount.$error }">
-        <label class="form__label" style="color: darkblue">amount</label>
-        <input class="form__input" v-model.trim="$v.amount.$model"/>
+        <label data-test-amount class="form__label" style="color: darkblue">amount</label>
+        <input data-test="amount" class="form__input" v-model.trim="$v.amount.$model"/>
       </div>
       <div class="error" v-if="!$v.amount.required" >amount is Required</div>
 
       <div class="form-group" :class="{ 'form-group--error': $v.providerID.$error }">
-        <label class="form__label" style="color: darkblue">providerID</label>
-        <input class="form__input" v-model.trim="$v.providerID.$model"/>
+        <label data-test-providerID class="form__label" style="color: darkblue">providerID</label>
+        <input data-test="providerID" class="form__input" v-model.trim="$v.providerID.$model"/>
       </div>
       <div class="error" v-if="!$v.providerID.required" >providerID is Required</div>
 
       <div class="form-group" :class="{ 'form-group--error': $v.providerName.$error }">
-        <label class="form__label" style="color: darkblue">providerName</label>
-        <input class="form__input" v-model.trim="$v.providerName.$model"/>
+        <label data-test-providerName class="form__label" style="color: darkblue">providerName</label>
+        <input data-test="providerName" class="form__input" v-model.trim="$v.providerName.$model"/>
       </div>
       <div class="error" v-if="!$v.providerName.required" >providerName is Required</div>
 
       <div class="form-group" :class="{ 'form-group--error': $v.providerType.$error }">
-        <label class="form__label" style="color: darkblue">providerType</label>
-        <input class="form__input" v-model.trim="$v.providerType.$model"/>
+        <label data-test-providerType class="form__label" style="color: darkblue">providerType</label>
+        <input data-test="providerType" class="form__input" v-model.trim="$v.providerType.$model"/>
       </div>
       <div class="error" v-if="!$v.providerType.required" >providerType is Required</div>
 
@@ -43,7 +43,7 @@
       <p>
         <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">Operate</button>
       </p>
-      <p class="typo__p" v-if="submitStatus === 'OK'">Operation succeed!</p>
+      <p data-test-operate class="typo__p" v-if="submitStatus === 'OK'">Operation succeed!</p>
       <p class="typo__p" v-if="submitStatus === 'ERROR'">Please Fill in the Form Correctly.</p>
       <p class="typo__p" v-if="submitStatus === 'PENDING'">Running...</p>
 

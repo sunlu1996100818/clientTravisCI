@@ -3,17 +3,17 @@
   <div class = "note" :style = "note" align="center">
     <!--login框，表单+tab标签页的组合-->
     <div class="note" >
-      <h3 style="color: white;font-size: 30px">Login in</h3>
+      <h3 class = "a" style="color: white;font-size: 30px">Login in</h3>
       <form class="login">
         <p class="title">Log in</p>
-        <input type="text" v-model="email" placeholder="Email" autofocus/>
+        <input data-test-email type="text" v-model="email" placeholder="Email" autofocus/>
         <i class="fa fa-user"></i>
-        <input type="password" v-model="password" placeholder="Password" />
+        <input data-test-password type="password" v-model="password" placeholder="Password" />
         <i class="fa fa-key"></i>
-        <a href="#">Forgot your password?</a>
-        <button @click="login">Log in</button>
+        <a class = "h" href="#">Forgot your password?</a>
+        <button data-test-button @click="login">Log in</button>
       </form>
-      <p style="color: white;font-size: 30px">You don't have an account ? you can <router-link to="/sign-up">create one </router-link></p>
+      <p data-test-text_create style="color: white;font-size: 30px">You don't have an account ? you can <router-link to="/sign-up">create one </router-link></p>
 
     </div>
   </div>

@@ -2,14 +2,14 @@ import Api from '@/services/api'
 
 export default {
   fetchCargoes () {
-    return Api().get('/cargoAll/John')
+    return Api().get('/cargoAll/')
   },
   postCargo (cargo) {
-    return Api().post('/cargo/John', cargo)
+    return Api().post('/cargo/', cargo)
       //{ headers: {'Content-type': 'application/json'} })
   },
   deleteCargo (id) {
-    return Api().delete(`/cargo/${id}/John`)
+    return Api().delete(`/cargo/${id}`)
   },
   /*putCargo (id, cargo) {
     console.log('REQUESTING ' + cargo._id + ' ' +
@@ -24,7 +24,7 @@ export default {
       { headers: {'Content-type': 'application/json'} })
   },
   fetchCargoById (id) {
-    return Api().get(`/cargoId/${id}/John`)
+    return Api().get(`/cargoId/${id}`)
   },
   fetchProvider () {
     return Api().get('/provider/providerAll')
