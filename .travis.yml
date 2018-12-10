@@ -1,16 +1,14 @@
 dist: trusty
 language: node_js
 node_js:
-- stable
+- "stable"
+cache:
+  directories:
+  - node_modules
 script:
-- npm run coverage
-after_success:
-- npm run publish-coverage
-branches:
-  only: development
-notifications:
-  email:
-    recipients:
-    - 996844107@qq.com     # change to your own address
-    on_success: never        # default: change
-    on_failure: always       # default: always
+- npx cypress run
+before_script:
+- npm install -g httpserver
+- npm run custom-build
+- cd dist && httpserver -p 8080 &
+
