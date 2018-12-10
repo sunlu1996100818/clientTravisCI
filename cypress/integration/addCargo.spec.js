@@ -84,7 +84,7 @@ describe("add Cargo page", () => {
       })
     });
 
-    it("Redirects when links are clicked", () => {
+    /*it("Redirects when links are clicked", () => {
       cy.get('[data-test-button1]').click();
       cy.url().should('include','/cargoes' );
 
@@ -100,10 +100,8 @@ describe("add Cargo page", () => {
       cy.get('[data-test-button5]').click();
       cy.url().should('include','/contact' );
 
-      /*cy.get('[data-test-button6]').click();
-      cy.url().should('include','/login' );*/
-      // etc
-    });
+
+    })*/
   })
 
 })
